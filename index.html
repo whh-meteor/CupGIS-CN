@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CupGIS 独立站点集：数据、地图与空间探索。">
+    <meta name="theme-color" content="#faf9f6">
+    <meta name="color-scheme" content="light dark">
+    <title>CupGIS · 独立站点集</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./styles.css">
+    <script type="module" src="./app.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="masthead">
+        <a class="wordmark" href="./" aria-label="CupGIS 首页" data-brand>CupGIS.</a>
+        <span class="masthead-note" data-label>独立站点集</span>
+      </header>
+      <main id="main">
+        <div class="intro"><h1 data-tagline>关于空间，也关于探索。</h1></div>
+        <div class="gallery" id="gallery" aria-label="网站入口" aria-busy="true"></div>
+        <p class="notice" id="notice" role="status">正在载入站点…</p>
+        <noscript><p class="notice">请开启 JavaScript 以显示站点入口。</p></noscript>
+      </main>
+      <footer class="footer">
+        <span>© <span data-copyright>CupGIS</span></span>
+        <span data-footer>保持好奇，继续探索。</span>
+      </footer>
+    </div>
+    <template id="site-template">
+      <a class="site" target="_blank" rel="noopener noreferrer">
+        <div class="preview">
+          <div class="preview-fallback" aria-hidden="true">
+            <span class="fallback-name"></span>
+            <span class="fallback-note">首页预览待更新</span>
+          </div>
+          <img class="preview-image" alt="" width="1440" height="900" decoding="async">
+        </div>
+        <div class="caption">
+          <div class="caption-text"><h2 class="site-name"></h2><span class="site-domain"></span></div>
+          <span class="visit-arrow" aria-hidden="true">↗</span>
+        </div>
+      </a>
+    </template>
+  </body>
+</html>

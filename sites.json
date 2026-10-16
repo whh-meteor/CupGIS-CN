@@ -1,0 +1,14 @@
+{
+  "brand": "CupGIS.",
+  "label": "独立站点集",
+  "tagline": "关于空间，也关于探索。",
+  "copyright": "CupGIS",
+  "footer": "保持好奇，继续探索。",
+  "sites": [
+    { "name": "免费 GIS 数据导航", "url": "https://data.cupgis.cn/" },
+    { "name": "GIS 数据在线查看器", "url": "https://viewer.cupgis.cn/" },
+    { "name": "Neptune", "url": "https://neptune.cupgis.cn/" },
+    { "name": "Neptune Windy", "url": "https://windy.cupgis.cn/" },
+    { "name": "Portal", "url": "https://portal.cupgis.cn/" }
+  ]
+}

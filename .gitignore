@@ -1,0 +1,6 @@
+node_modules/
+dist/
+.local/
+*.log
+assets/previews/*.tmp
+.DS_Store
