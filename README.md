@@ -99,7 +99,39 @@ $env:PREVIEW_BROWSER_CHANNEL = "msedge"
 npm run previews
 ```
 
-## 部署到 Cloudflare Pages
+## 部署到 Cloudflare Workers（Wrangler）
+
+如果控制台显示 Worker 名称 `cupgis-cn`，并执行 `npx wrangler deploy`，你使用的是 **Workers Builds**。该方式已由仓库中的 `wrangler.json` 支持：静态资源目录固定为 `./dist`。
+
+在 Cloudflare 的 Workers 项目 → Settings → Build 中设置：
+
+| 配置项 | 内容 |
+| --- | --- |
+| 生产分支 | `main` |
+| 根目录 / Root directory | 仓库根目录（默认值即可） |
+| 构建命令 / Build command | `npm run build` |
+| 部署命令 / Deploy command | `npx wrangler deploy` |
+| Node.js 版本 | 24 |
+
+然后使用最新提交重新部署。**不要在部署命令中添加 `--assets .`，也不要把静态资源目录改成仓库根目录。** 根目录中有 `node_modules`，其中的 Wrangler/workerd 二进制文件会超过单个静态资源的大小限制。构建后的 `dist` 仅包含首页、样式、脚本、配置和预览图片。
+
+如果希望把构建与部署合为一个命令，也可以将 Build command 留空、Deploy command 设置为 `npm run deploy`；该命令会先生成 `dist` 再执行 Wrangler。
+
+本地验证部署包（不会上传、不需要 Cloudflare 登录）：
+
+```sh
+npm run deploy:check
+```
+
+本地正式部署（需要自己已登录 Wrangler 或配置 Cloudflare Token）：
+
+```sh
+npm run deploy
+```
+
+`npm run preview` 可通过 Wrangler 在本地预览构建产物。若要绑定 `cupgis.cn`，在该 Worker 的 Settings → Domains & Routes 中配置自定义域名。
+
+## 部署到 Cloudflare Pages（另一种方式）
 
 连接此 GitHub 仓库，设置：
 
@@ -124,5 +156,6 @@ npm run previews
 | `assets/previews/` | 网站截图，可自行放置封面 |
 | `scripts/capture-previews.mjs` | 预览图生成脚本 |
 | `.github/workflows/previews.yml` | 自动截图并保存 |
+| `wrangler.json` | Workers 部署设置，只上传 `dist` |
 
 门户只展示配置中的公开入口，不扫描 DNS，也不在网页里放任何管理密钥。

@@ -4,3 +4,6 @@ dist/
 *.log
 assets/previews/*.tmp
 .DS_Store
+.wrangler/
+.dev.vars*
+.env*
