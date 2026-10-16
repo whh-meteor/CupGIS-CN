@@ -9,6 +9,7 @@
     { "name": "GIS 数据在线查看器", "url": "https://viewer.cupgis.cn/" },
     { "name": "Neptune", "url": "https://neptune.cupgis.cn/" },
     { "name": "Neptune Windy", "url": "https://windy.cupgis.cn/" },
-    { "name": "Portal", "url": "https://portal.cupgis.cn/" }
+    { "name": "Portal", "url": "https://portal.cupgis.cn/" },
+    { "name": "海与山 青岛", "url": "https://tsingtao.cupgis.cn/" }
   ]
 }
