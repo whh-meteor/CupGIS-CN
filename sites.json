@@ -7,9 +7,9 @@
   "sites": [
     { "name": "免费 GIS 数据导航", "url": "https://data.cupgis.cn/" },
     { "name": "GIS 数据在线查看器", "url": "https://viewer.cupgis.cn/" },
-    { "name": "Neptune", "url": "https://neptune.cupgis.cn/" },
-    { "name": "Neptune Windy", "url": "https://windy.cupgis.cn/" },
-    { "name": "Portal", "url": "https://portal.cupgis.cn/" },
-    { "name": "海与山 青岛", "url": "https://tsingtao.cupgis.cn/" }
+    { "name": "Neptune 海洋数值模拟工具", "url": "https://neptune.cupgis.cn/" },
+    { "name": "地图功能开发示例集", "url": "https://mts.cupgis.cn/" },
+    { "name": "Neptune Windy气象服务", "url": "https://windy.cupgis.cn/" },
+    { "name": "Threejs Portal", "url": "https://portal.cupgis.cn/" }
   ]
 }
